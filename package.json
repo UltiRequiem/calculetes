@@ -1,14 +1,9 @@
 {
-  "name": "caluletes.js",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/jest": "^29.5.14",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.3.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+  "name": "calculetes-project",
+  "version": "1.0.0",
+  "description": "A monorepo for the Calculetes project",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
 }
