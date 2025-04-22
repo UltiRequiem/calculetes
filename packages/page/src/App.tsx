@@ -1,9 +1,8 @@
 import "./index.css";
-import { APITester } from "./APITester";
-import { Card, CardContent } from "@/components/ui/card";
 
 import logo from "./logo.svg";
 import reactLogo from "./react.svg";
+import { IntegralCalculator } from "./Integral";
 
 export function App() {
   return (
@@ -21,19 +20,15 @@ export function App() {
         />
       </div>
 
-      <Card className="bg-card/50 backdrop-blur-sm border-muted">
-        <CardContent className="pt-6">
-          <h1 className="text-5xl font-bold my-4 leading-tight">Bun + React</h1>
-          <p>
-            Edit{" "}
-            <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
-              src/App.tsx
-            </code>{" "}
-            and save to test HMR
-          </p>
-          <APITester />
-        </CardContent>
-      </Card>
+      <div className="container py-8">
+        <h1 className="text-2xl font-bold mb-6">Calculetes</h1>
+        <IntegralCalculator />
+      </div>
+
+      <footer className="mt-16 pt-8 border-t border-gray-200 text-gray-500">
+        <p className="text-sm">Made with ❤️ by Eliaz</p>
+        <p className="text-xs mt-1">{new Date().getFullYear()}</p>
+      </footer>
     </div>
   );
 }
