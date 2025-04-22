@@ -1,0 +1,43 @@
+name: Library CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/calculetes/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/calculetes/**"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: |
+          bun install
+
+      - name: Run tests
+        run: |
+          cd packages/calculetes
+          bun test
+
+      - name: Run type check
+        run: |
+          cd packages/calculetes
+          bun run typecheck
+
+      - name: Run linting
+        run: |
+          cd packages/calculetes
+          bun run lint
