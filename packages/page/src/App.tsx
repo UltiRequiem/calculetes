@@ -26,7 +26,7 @@ export function App() {
       </div>
 
       <footer className="mt-16 pt-8 border-t border-gray-200 text-gray-500">
-        <p className="text-sm">Made with ❤️ by Eliaz</p>
+        <p className="text-sm">Made with ❤️ by Eliaz Bobadilla</p>
         <p className="text-xs mt-1">{new Date().getFullYear()}</p>
       </footer>
     </div>
