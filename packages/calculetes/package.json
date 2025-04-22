@@ -1,5 +1,5 @@
 {
-  "name": "caluletes.js",
+  "name": "calculetes",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

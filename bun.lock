@@ -4,8 +4,8 @@
     "": {
       "name": "calculetes-project",
     },
-    "packages/calculetes.js": {
-      "name": "caluletes.js",
+    "packages/calculetes": {
+      "name": "calculetes",
       "devDependencies": {
         "@types/bun": "latest",
         "@types/jest": "^29.5.14",
@@ -25,6 +25,7 @@
         "@radix-ui/react-select": "^2.1.6",
         "@radix-ui/react-slot": "^1.1.2",
         "bun-plugin-tailwind": "^0.0.14",
+        "calculetes": "workspace:*",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "lucide-react": "^0.475.0",
@@ -304,9 +305,9 @@
 
     "bun-types": ["bun-types@1.2.10", "", { "dependencies": { "@types/node": "*" } }, "sha512-b5ITZMnVdf3m1gMvJHG+gIfeJHiQPJak0f7925Hxu6ZN5VKA8AGy4GZ4lM+Xkn6jtWxg5S3ldWvfmXdvnkp3GQ=="],
 
-    "callsites": ["callsites@3.1.0", "", {}, "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ=="],
+    "calculetes": ["calculetes@workspace:packages/calculetes"],
 
-    "caluletes.js": ["caluletes.js@workspace:packages/calculetes.js"],
+    "callsites": ["callsites@3.1.0", "", {}, "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ=="],
 
     "camelcase": ["camelcase@6.3.0", "", {}, "sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA=="],
 
