@@ -57,7 +57,6 @@ export class Derivative {
       return this.calculate(derivFunc, { at, order: order - 1 });
     }
 
-    // Calculate first derivative based on selected method
     switch (this.method) {
       case "forward":
         return (func(at + this.stepSize) - func(at)) / this.stepSize;
