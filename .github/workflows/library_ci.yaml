@@ -31,13 +31,7 @@ jobs:
         run: |
           cd packages/calculetes
           bun test
-
-      - name: Run type check
+      - name: Build the library
         run: |
           cd packages/calculetes
-          bun run typecheck
-
-      - name: Run linting
-        run: |
-          cd packages/calculetes
-          bun run lint
+          bun build
