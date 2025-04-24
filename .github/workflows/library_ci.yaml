@@ -34,4 +34,4 @@ jobs:
       - name: Build the library
         run: |
           cd packages/calculetes
-          bun build
+          bun run build
