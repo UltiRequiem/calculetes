@@ -17,12 +17,20 @@
  * // Result: [-5, 0, 5]
  */
 export function partitionInterval(
-	from: number,
-	to: number,
-	partitions: number,
+  from: number,
+  to: number,
+  partitions: number
 ): number[] {
-	const step = (to - from) / partitions;
-	return Array.from({ length: partitions + 1 }, (_, i) => from + i * step);
+  if (partitions < 0) {
+    throw new Error("Number of partitions must be non-negative");
+  }
+
+  if (partitions === 0) {
+    return [from];
+  }
+
+  const step = (to - from) / partitions;
+  return Array.from({ length: partitions + 1 }, (_, i) => from + i * step);
 }
 
 /**
@@ -44,9 +52,9 @@ export function partitionInterval(
  * const values = evaluateFunctionAtPoints(Math.sin, points);
  * // Result: [0, 1, 0]
  */
-export function evaluateFunctionAtPoints(
-	func: (x: number) => number,
-	points: number[],
-): number[] {
-	return points.map(func);
+export function evaluateFunctionAtPoints<T>(
+  func: (x: number) => T,
+  points: number[]
+): T[] {
+  return points.map(func);
 }
