@@ -4,6 +4,9 @@
 	"description": "A monorepo for the Calculetes project",
 	"private": true,
 	"workspaces": ["packages/*"],
+	"scripts": {
+		"fix": "biome check --fix --unsafe"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4"
 	}
