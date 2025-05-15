@@ -2,3 +2,5 @@
 
 export { Integral } from "./integral/index.js";
 export { Derivative } from "./derivative/index.js";
+export * from "./probabilities/index.js";
+export * from "./utils/calculationHelpers.js";

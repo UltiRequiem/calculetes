@@ -1,13 +1,16 @@
 {
-	"name": "calculetes-project",
-	"version": "1.0.0",
-	"description": "A monorepo for the Calculetes project",
-	"private": true,
-	"workspaces": ["packages/*"],
-	"scripts": {
-		"fix": "biome check --fix --unsafe"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4"
-	}
+  "name": "calculetes-project",
+  "version": "1.0.0",
+  "description": "A monorepo for the Calculetes project",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "fix": "biome check --fix --unsafe",
+    "dev:frontend": "cd packages/page && bun run dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
 }

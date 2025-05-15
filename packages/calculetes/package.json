@@ -10,7 +10,7 @@
 		"clean": "rm -rf dist",
 		"prebuild": "bun run clean",
 		"build": "tsc --project tsconfig.json",
-		"test": "jest --passWithNoTests"
+		"test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests"
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
