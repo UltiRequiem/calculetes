@@ -1,9 +1,10 @@
 {
-  "name": "calculetes-project",
-  "version": "1.0.0",
-  "description": "A monorepo for the Calculetes project",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "calculetes-project",
+	"version": "1.0.0",
+	"description": "A monorepo for the Calculetes project",
+	"private": true,
+	"workspaces": ["packages/*"],
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }

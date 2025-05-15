@@ -17,12 +17,12 @@
  * // Result: [-5, 0, 5]
  */
 export function partitionInterval(
-  from: number,
-  to: number,
-  partitions: number
+	from: number,
+	to: number,
+	partitions: number,
 ): number[] {
-  const step = (to - from) / partitions;
-  return Array.from({ length: partitions + 1 }, (_, i) => from + i * step);
+	const step = (to - from) / partitions;
+	return Array.from({ length: partitions + 1 }, (_, i) => from + i * step);
 }
 
 /**
@@ -45,8 +45,8 @@ export function partitionInterval(
  * // Result: [0, 1, 0]
  */
 export function evaluateFunctionAtPoints(
-  func: (x: number) => number,
-  points: number[]
+	func: (x: number) => number,
+	points: number[],
 ): number[] {
-  return points.map(func);
+	return points.map(func);
 }
