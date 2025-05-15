@@ -3,8 +3,13 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"version": "0.1.0",
+	"main": "./dist/index.js",
+	"types": "./dist/types/index.d.ts",
+	"files": ["dist"],
 	"scripts": {
-		"build": "bun build ./src/index.ts --outdir ./build",
+		"clean": "rm -rf dist",
+		"prebuild": "bun run clean",
+		"build": "tsc --project tsconfig.json",
 		"test": "jest --passWithNoTests",
 		"lint": "eslint . --ext .ts,.tsx",
 		"format": "prettier --write ."
