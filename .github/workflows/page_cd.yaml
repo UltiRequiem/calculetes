@@ -16,21 +16,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: pnpm
+
       - name: Install dependencies
-        run: |
-          bun install
+        run: pnpm install --frozen-lockfile
 
       - name: Build project
-        run: |
-          cd packages/page
-          bun run build
+        run: pnpm --filter ./packages/page run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
